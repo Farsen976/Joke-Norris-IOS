@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B24407C22048458000DBB4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24407B22048458000DBB4C /* AppDelegate.swift */; };
+		8B24407E22048458000DBB4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24407D22048458000DBB4C /* ViewController.swift */; };
+		8B24408122048458000DBB4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B24407F22048458000DBB4C /* Main.storyboard */; };
+		8B2440832204845A000DBB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2440822204845A000DBB4C /* Assets.xcassets */; };
+		8B2440862204845A000DBB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2440842204845A000DBB4C /* LaunchScreen.storyboard */; };
+		8B2440912204845A000DBB4C /* Joke_NorrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2440902204845A000DBB4C /* Joke_NorrisTests.swift */; };
+		8B24409C2204845A000DBB4C /* Joke_NorrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24409B2204845A000DBB4C /* Joke_NorrisUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B24408D2204845A000DBB4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B24407022048458000DBB4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B24407722048458000DBB4C;
+			remoteInfo = "Joke Norris";
+		};
+		8B2440982204845A000DBB4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B24407022048458000DBB4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B24407722048458000DBB4C;
+			remoteInfo = "Joke Norris";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B24407822048458000DBB4C /* Joke Norris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joke Norris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B24407B22048458000DBB4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B24407D22048458000DBB4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B24408022048458000DBB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B2440822204845A000DBB4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B2440852204845A000DBB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B2440872204845A000DBB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B24408C2204845A000DBB4C /* Joke NorrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Joke NorrisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2440902204845A000DBB4C /* Joke_NorrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke_NorrisTests.swift; sourceTree = "<group>"; };
+		8B2440922204845A000DBB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B2440972204845A000DBB4C /* Joke NorrisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Joke NorrisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B24409B2204845A000DBB4C /* Joke_NorrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke_NorrisUITests.swift; sourceTree = "<group>"; };
+		8B24409D2204845A000DBB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B24407522048458000DBB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2440892204845A000DBB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2440942204845A000DBB4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B24406F22048458000DBB4C = {
+			isa = PBXGroup;
+			children = (
+				8B24407A22048458000DBB4C /* Joke Norris */,
+				8B24408F2204845A000DBB4C /* Joke NorrisTests */,
+				8B24409A2204845A000DBB4C /* Joke NorrisUITests */,
+				8B24407922048458000DBB4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B24407922048458000DBB4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B24407822048458000DBB4C /* Joke Norris.app */,
+				8B24408C2204845A000DBB4C /* Joke NorrisTests.xctest */,
+				8B2440972204845A000DBB4C /* Joke NorrisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B24407A22048458000DBB4C /* Joke Norris */ = {
+			isa = PBXGroup;
+			children = (
+				8B24407B22048458000DBB4C /* AppDelegate.swift */,
+				8B24407D22048458000DBB4C /* ViewController.swift */,
+				8B24407F22048458000DBB4C /* Main.storyboard */,
+				8B2440822204845A000DBB4C /* Assets.xcassets */,
+				8B2440842204845A000DBB4C /* LaunchScreen.storyboard */,
+				8B2440872204845A000DBB4C /* Info.plist */,
+			);
+			path = "Joke Norris";
+			sourceTree = "<group>";
+		};
+		8B24408F2204845A000DBB4C /* Joke NorrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B2440902204845A000DBB4C /* Joke_NorrisTests.swift */,
+				8B2440922204845A000DBB4C /* Info.plist */,
+			);
+			path = "Joke NorrisTests";
+			sourceTree = "<group>";
+		};
+		8B24409A2204845A000DBB4C /* Joke NorrisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B24409B2204845A000DBB4C /* Joke_NorrisUITests.swift */,
+				8B24409D2204845A000DBB4C /* Info.plist */,
+			);
+			path = "Joke NorrisUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B24407722048458000DBB4C /* Joke Norris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2440A02204845A000DBB4C /* Build configuration list for PBXNativeTarget "Joke Norris" */;
+			buildPhases = (
+				8B24407422048458000DBB4C /* Sources */,
+				8B24407522048458000DBB4C /* Frameworks */,
+				8B24407622048458000DBB4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Joke Norris";
+			productName = "Joke Norris";
+			productReference = 8B24407822048458000DBB4C /* Joke Norris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B24408B2204845A000DBB4C /* Joke NorrisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2440A32204845A000DBB4C /* Build configuration list for PBXNativeTarget "Joke NorrisTests" */;
+			buildPhases = (
+				8B2440882204845A000DBB4C /* Sources */,
+				8B2440892204845A000DBB4C /* Frameworks */,
+				8B24408A2204845A000DBB4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B24408E2204845A000DBB4C /* PBXTargetDependency */,
+			);
+			name = "Joke NorrisTests";
+			productName = "Joke NorrisTests";
+			productReference = 8B24408C2204845A000DBB4C /* Joke NorrisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B2440962204845A000DBB4C /* Joke NorrisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2440A62204845A000DBB4C /* Build configuration list for PBXNativeTarget "Joke NorrisUITests" */;
+			buildPhases = (
+				8B2440932204845A000DBB4C /* Sources */,
+				8B2440942204845A000DBB4C /* Frameworks */,
+				8B2440952204845A000DBB4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B2440992204845A000DBB4C /* PBXTargetDependency */,
+			);
+			name = "Joke NorrisUITests";
+			productName = "Joke NorrisUITests";
+			productReference = 8B2440972204845A000DBB4C /* Joke NorrisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B24407022048458000DBB4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Farsen;
+				TargetAttributes = {
+					8B24407722048458000DBB4C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					8B24408B2204845A000DBB4C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8B24407722048458000DBB4C;
+					};
+					8B2440962204845A000DBB4C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8B24407722048458000DBB4C;
+					};
+				};
+			};
+			buildConfigurationList = 8B24407322048458000DBB4C /* Build configuration list for PBXProject "Joke Norris" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B24406F22048458000DBB4C;
+			productRefGroup = 8B24407922048458000DBB4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B24407722048458000DBB4C /* Joke Norris */,
+				8B24408B2204845A000DBB4C /* Joke NorrisTests */,
+				8B2440962204845A000DBB4C /* Joke NorrisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B24407622048458000DBB4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B2440862204845A000DBB4C /* LaunchScreen.storyboard in Resources */,
+				8B2440832204845A000DBB4C /* Assets.xcassets in Resources */,
+				8B24408122048458000DBB4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B24408A2204845A000DBB4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2440952204845A000DBB4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B24407422048458000DBB4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B24407E22048458000DBB4C /* ViewController.swift in Sources */,
+				8B24407C22048458000DBB4C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2440882204845A000DBB4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B2440912204845A000DBB4C /* Joke_NorrisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B2440932204845A000DBB4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B24409C2204845A000DBB4C /* Joke_NorrisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B24408E2204845A000DBB4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B24407722048458000DBB4C /* Joke Norris */;
+			targetProxy = 8B24408D2204845A000DBB4C /* PBXContainerItemProxy */;
+		};
+		8B2440992204845A000DBB4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B24407722048458000DBB4C /* Joke Norris */;
+			targetProxy = 8B2440982204845A000DBB4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B24407F22048458000DBB4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B24408022048458000DBB4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B2440842204845A000DBB4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B2440852204845A000DBB4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B24409E2204845A000DBB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B24409F2204845A000DBB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B2440A12204845A000DBB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YL47B53486;
+				INFOPLIST_FILE = "Joke Norris/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.farsen.Joke-Norris";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B2440A22204845A000DBB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YL47B53486;
+				INFOPLIST_FILE = "Joke Norris/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.farsen.Joke-Norris";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B2440A42204845A000DBB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YL47B53486;
+				INFOPLIST_FILE = "Joke NorrisTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.farsen.Joke-NorrisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Joke Norris.app/Joke Norris";
+			};
+			name = Debug;
+		};
+		8B2440A52204845A000DBB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YL47B53486;
+				INFOPLIST_FILE = "Joke NorrisTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.farsen.Joke-NorrisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Joke Norris.app/Joke Norris";
+			};
+			name = Release;
+		};
+		8B2440A72204845A000DBB4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YL47B53486;
+				INFOPLIST_FILE = "Joke NorrisUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.farsen.Joke-NorrisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Joke Norris";
+			};
+			name = Debug;
+		};
+		8B2440A82204845A000DBB4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YL47B53486;
+				INFOPLIST_FILE = "Joke NorrisUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.farsen.Joke-NorrisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Joke Norris";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B24407322048458000DBB4C /* Build configuration list for PBXProject "Joke Norris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B24409E2204845A000DBB4C /* Debug */,
+				8B24409F2204845A000DBB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B2440A02204845A000DBB4C /* Build configuration list for PBXNativeTarget "Joke Norris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2440A12204845A000DBB4C /* Debug */,
+				8B2440A22204845A000DBB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B2440A32204845A000DBB4C /* Build configuration list for PBXNativeTarget "Joke NorrisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2440A42204845A000DBB4C /* Debug */,
+				8B2440A52204845A000DBB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B2440A62204845A000DBB4C /* Build configuration list for PBXNativeTarget "Joke NorrisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2440A72204845A000DBB4C /* Debug */,
+				8B2440A82204845A000DBB4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B24407022048458000DBB4C /* Project object */;
+}
