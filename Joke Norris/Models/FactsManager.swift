@@ -53,10 +53,16 @@ class FactsManager: Decodable {
             }
             
             let jsonDecoder = JSONDecoder()
-            guard let txtFacts = try? jsonDecoder.decode([Fact].self, from: data) else {
+            guard var txtFacts = try? jsonDecoder.decode([Fact].self, from: data) else {
                 completion(nil, error)
                 return
             }
+            
+            for (index, element) in txtFacts.enumerated() {
+                txtFacts[index].fact = element.fact.html2String
+                txtFacts[index].rating = element.points.toDouble / element.vote.toDouble
+            }
+            
             self.facts = txtFacts
             
             completion(txtFacts, error)

@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fact: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var rating: CosmosView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

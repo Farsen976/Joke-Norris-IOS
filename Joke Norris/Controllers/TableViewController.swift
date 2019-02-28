@@ -13,15 +13,18 @@ class TableViewController: UITableViewController {
     var manager = FactsManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         manager.getTextesFacts { (facts, error) in
-            if let facts = facts {
-                self.manager.facts = facts
+            if error == nil {
+                print(self.manager.facts)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -31,20 +34,17 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return manager.facts.count ?? 0
+        return self.manager.facts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fact", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fact", for: indexPath) as! TableViewCell
         let currentFact = manager.facts[indexPath.row]
-        cell.textLabel?.text = currentFact.fact
+        cell.fact?.text = currentFact.fact
+        cell.date?.text = currentFact.date
+        cell.rating?.rating = currentFact.rating ?? 0
 
         return cell
     }
