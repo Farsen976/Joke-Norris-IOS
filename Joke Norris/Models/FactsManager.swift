@@ -41,8 +41,8 @@ class FactsManager: Decodable {
         task.resume()
     }
     
-    func getTextesFacts(completion: @escaping ([Fact]?, Error?) -> ()) {
-        let params: String = "data=type:txt"
+    func getTextesFacts(page: Int = 1, completion: @escaping ([Fact]?, Error?) -> ()) {
+        let params: String = "data=type:txt;page:\(page)"
         let request: String = endPoint + params
         
         let session = URLSession.shared
@@ -61,9 +61,13 @@ class FactsManager: Decodable {
             for (index, element) in txtFacts.enumerated() {
                 txtFacts[index].fact = element.fact.html2String
                 txtFacts[index].rating = element.points.toDouble / element.vote.toDouble
+                
+                let contains = self.facts.contains(where: { (fact) -> Bool in
+                    return fact.id == element.id
+                })
+                
+                if(!contains) {self.facts.append(txtFacts[index])}
             }
-            
-            self.facts = txtFacts
             
             completion(txtFacts, error)
         }

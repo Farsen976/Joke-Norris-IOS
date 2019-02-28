@@ -11,6 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var manager = FactsManager()
+    var page = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -18,18 +20,22 @@ class TableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        self.loadFact()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        manager.getTextesFacts { (facts, error) in
+        
+    }
+    
+    func loadFact() {
+        manager.getTextesFacts(page: self.page, completion: { (facts, error) in
             if error == nil {
                 print(self.manager.facts)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             }
-        }
+        })
     }
 
     // MARK: - Table view data source
@@ -43,13 +49,18 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fact", for: indexPath) as! TableViewCell
         let currentFact = manager.facts[indexPath.row]
         cell.fact?.text = currentFact.fact
-        cell.date?.text = currentFact.date
+        cell.date?.text = Date(timeIntervalSince1970: currentFact.date.toDouble).relativeTime
         cell.rating?.rating = currentFact.rating ?? 0
 
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row >= self.manager.facts.count - 1 {
+            self.page += 1
+            self.loadFact()
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -21,6 +21,7 @@
 		8B88CFF32227D8580074CFCE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88CFF22227D8580074CFCE /* TableViewCell.swift */; };
 		8B88CFF52227D87A0074CFCE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88CFF42227D87A0074CFCE /* CollectionViewCell.swift */; };
 		8B88CFF72227F82C0074CFCE /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88CFF62227F82C0074CFCE /* CosmosDistrib.swift */; };
+		8B88CFFA222821010074CFCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88CFF9222821010074CFCE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		8B88CFF22227D8580074CFCE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8B88CFF42227D87A0074CFCE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8B88CFF62227F82C0074CFCE /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		8B88CFF9222821010074CFCE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,11 +165,20 @@
 		8B82999522104619004A1C25 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B88CFF8222820D30074CFCE /* Extensions */,
 				8B82999622104641004A1C25 /* Fact.swift */,
 				8B829998221046B6004A1C25 /* FactsManager.swift */,
 				8B88CFF62227F82C0074CFCE /* CosmosDistrib.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8B88CFF8222820D30074CFCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8B88CFF9222821010074CFCE /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				8B88CFF52227D87A0074CFCE /* CollectionViewCell.swift in Sources */,
 				8B829999221046B6004A1C25 /* FactsManager.swift in Sources */,
 				8B82999722104641004A1C25 /* Fact.swift in Sources */,
+				8B88CFFA222821010074CFCE /* Extensions.swift in Sources */,
 				8B88CFF72227F82C0074CFCE /* CosmosDistrib.swift in Sources */,
 				8B24407C22048458000DBB4C /* AppDelegate.swift in Sources */,
 				8B88CFF32227D8580074CFCE /* TableViewCell.swift in Sources */,

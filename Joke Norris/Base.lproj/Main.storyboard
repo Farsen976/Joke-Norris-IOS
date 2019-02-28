@@ -60,26 +60,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dTk-PR-rUo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dTk-PR-rUo">
+                                            <rect key="frame" x="20" y="8" width="335" height="27.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noa-Sc-bhE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="3.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rpy-vz-18m">
-                                                    <rect key="frame" x="0.0" y="23" width="375" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="7.5" width="335" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SQ-eR-5ya">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCC-dx-Xnr" customClass="CosmosView" customModule="Joke_Norris" customModuleProvider="target">
-                                                            <rect key="frame" x="255" y="0.0" width="120" height="20.5"/>
+                                                            <rect key="frame" x="215" y="0.0" width="120" height="20"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -111,10 +111,10 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dTk-PR-rUo" firstAttribute="leading" secondItem="F0M-Zu-sdB" secondAttribute="leading" id="8hh-Kp-22N"/>
-                                        <constraint firstAttribute="trailing" secondItem="dTk-PR-rUo" secondAttribute="trailing" id="As7-I4-xnl"/>
-                                        <constraint firstAttribute="bottom" secondItem="dTk-PR-rUo" secondAttribute="bottom" id="f2j-iE-g2p"/>
-                                        <constraint firstItem="dTk-PR-rUo" firstAttribute="top" secondItem="F0M-Zu-sdB" secondAttribute="top" id="mNO-ol-ftg"/>
+                                        <constraint firstItem="dTk-PR-rUo" firstAttribute="leading" secondItem="F0M-Zu-sdB" secondAttribute="leading" constant="20" symbolic="YES" id="8hh-Kp-22N"/>
+                                        <constraint firstAttribute="trailing" secondItem="dTk-PR-rUo" secondAttribute="trailing" constant="20" symbolic="YES" id="As7-I4-xnl"/>
+                                        <constraint firstAttribute="bottom" secondItem="dTk-PR-rUo" secondAttribute="bottom" constant="8" id="f2j-iE-g2p"/>
+                                        <constraint firstItem="dTk-PR-rUo" firstAttribute="top" secondItem="F0M-Zu-sdB" secondAttribute="top" constant="8" id="mNO-ol-ftg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
