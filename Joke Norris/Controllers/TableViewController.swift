@@ -42,17 +42,25 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.manager.facts.count
+        return self.manager.facts.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fact", for: indexPath) as! TableViewCell
-        let currentFact = manager.facts[indexPath.row]
-        cell.fact?.text = currentFact.fact
-        cell.date?.text = Date(timeIntervalSince1970: currentFact.date.toDouble).relativeTime
-        cell.rating?.rating = currentFact.rating ?? 0
-
-        return cell
+        if(indexPath.row != self.manager.facts.count) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "fact", for: indexPath) as! TableViewCell
+            let currentFact = manager.facts[indexPath.row]
+            cell.fact?.text = currentFact.fact
+            cell.date?.text = Date(timeIntervalSince1970: currentFact.date.toDouble).relativeTime
+            cell.rating?.rating = currentFact.rating ?? 0
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "loader", for: indexPath) as! TableViewCellLoader
+            
+            let imageData = UIImage.gifImageWithName("loader")
+            cell.gif.image = imageData
+            
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
