@@ -8,14 +8,12 @@
 
 import Foundation
 
-struct Fact: Decodable {
-    let id: String
-    var fact: String
-    let date: String
-    let vote: String
-    let points: String
+class Fact: Decodable {
+    var id: String = ""
+    var fact: String = ""
+    var date: String = ""
+    var vote: String = ""
+    var points: String = ""
     var rating: Double?
     var imageData: Data?
 }
-
-

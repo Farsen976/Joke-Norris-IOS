@@ -77,24 +77,12 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
         cell.img.image = UIImage.gifImageWithName("loader")
         
-        var currentFact = self.manager.facts[indexPath.row]
-        let imageUrl:URL = URL(string: currentFact.fact)!
+        let currentFact = self.manager.facts[indexPath.row]
         
-        if(currentFact.imageData != nil) {
-            cell.img.image = UIImage(data: currentFact.imageData!)
-        } else {
-            DispatchQueue.global().async {
-                let imageData = NSData(contentsOf: imageUrl)!
-                DispatchQueue.main.async {
-                    currentFact.imageData = imageData as Data
-                    cell.img.image = UIImage(data: currentFact.imageData!)
-                }
-            }
-        }
         
         //cell.img.image = UIImage.gifImageWithURL(currentFact.fact)
     
-        return cell
+        return cell.constructCell(fact: currentFact)
         
     }
     
