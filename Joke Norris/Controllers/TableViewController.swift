@@ -30,7 +30,6 @@ class TableViewController: UITableViewController {
     func loadFact() {
         manager.getTextesFacts(page: self.page, completion: { (facts, error) in
             if error == nil {
-                print(self.manager.facts)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

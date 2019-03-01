@@ -14,6 +14,7 @@
 		8B2440862204845A000DBB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2440842204845A000DBB4C /* LaunchScreen.storyboard */; };
 		8B2440912204845A000DBB4C /* Joke_NorrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2440902204845A000DBB4C /* Joke_NorrisTests.swift */; };
 		8B24409C2204845A000DBB4C /* Joke_NorrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24409B2204845A000DBB4C /* Joke_NorrisUITests.swift */; };
+		8B79C31122297157005D5A40 /* DetailFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79C31022297157005D5A40 /* DetailFactViewController.swift */; };
 		8B82999722104641004A1C25 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82999622104641004A1C25 /* Fact.swift */; };
 		8B829999221046B6004A1C25 /* FactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B829998221046B6004A1C25 /* FactsManager.swift */; };
 		8B82999F22104D67004A1C25 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82999E22104D67004A1C25 /* CollectionViewController.swift */; };
@@ -58,6 +59,7 @@
 		8B2440972204845A000DBB4C /* Joke NorrisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Joke NorrisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B24409B2204845A000DBB4C /* Joke_NorrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke_NorrisUITests.swift; sourceTree = "<group>"; };
 		8B24409D2204845A000DBB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B79C31022297157005D5A40 /* DetailFactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFactViewController.swift; sourceTree = "<group>"; };
 		8B82999622104641004A1C25 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		8B829998221046B6004A1C25 /* FactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsManager.swift; sourceTree = "<group>"; };
 		8B82999E22104D67004A1C25 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				8B82999E22104D67004A1C25 /* CollectionViewController.swift */,
 				8B8299A022104D8D004A1C25 /* TableViewController.swift */,
+				8B79C31022297157005D5A40 /* DetailFactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				8B88CFF72227F82C0074CFCE /* CosmosDistrib.swift in Sources */,
 				8B24407C22048458000DBB4C /* AppDelegate.swift in Sources */,
 				8B88CFF32227D8580074CFCE /* TableViewCell.swift in Sources */,
+				8B79C31122297157005D5A40 /* DetailFactViewController.swift in Sources */,
 				8B82999F22104D67004A1C25 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
