@@ -27,14 +27,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
         // Do any additional setup after loading the view.
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewWidth = self.collectionView.frame.width
-        let width: CGFloat = collectionViewWidth - (10 * CGFloat(itemsPerRow-1))
-        let cellWidth: CGFloat = width / CGFloat(self.itemsPerRow)
-        
-        return CGSize(width: cellWidth, height: cellWidth)
-    }
+
     
 //    override func viewDidAppear(_ animated: Bool) {
 //        let layout = UICollectionViewLayout()
@@ -47,7 +40,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     func loadData(){
         manager.getImageFacts(page: page, completion: { (facts, error) in
             if error == nil {
-                print(self.manager.facts)
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -91,6 +83,31 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             self.page += 1
             self.loadData()
             
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = self.collectionView.frame.width
+        let width: CGFloat = collectionViewWidth - (10 * CGFloat(itemsPerRow-1))
+        let cellWidth: CGFloat = width / CGFloat(self.itemsPerRow)
+        
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+    
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let vc = DetailFactViewController()
+//        vc.fact = self.manager.facts[indexPath.row]
+//
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is DetailFactViewController {
+            
+            guard let cell = sender as? CollectionViewCell else { return }
+            
+            let vc = segue.destination as? DetailFactViewController
+            vc?.fact = cell.fact
         }
     }
 

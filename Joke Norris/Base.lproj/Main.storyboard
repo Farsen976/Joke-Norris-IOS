@@ -30,9 +30,10 @@
         <!--Texts-->
         <scene sceneID="ONZ-3S-vsq">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Ac9-OK-KcW" sceneMemberID="viewController">
+                <navigationController id="Ac9-OK-KcW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Texts" id="oqe-gM-8fH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wGd-k6-3EO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -78,7 +79,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="img" destination="6aa-SC-zAh" id="IXl-iR-MAw"/>
-                                    <segue destination="Ot3-i2-P79" kind="show" id="qTq-hs-R9X"/>
+                                    <segue destination="Ot3-i2-P79" kind="show" id="cRe-XO-w4M"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -89,25 +90,62 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Pictures" id="73I-I6-cFh"/>
                     <navigationItem key="navigationItem" id="tVi-5o-jxm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rl2-P8-VN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2639" y="-656"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Fact View Controller-->
         <scene sceneID="v1u-zB-ryB">
             <objects>
-                <viewController id="Ot3-i2-P79" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DtB-Nr-Hvd" customClass="CollectionViewCell" customModule="Joke_Norris" customModuleProvider="target">
+                <viewController id="Ot3-i2-P79" customClass="DetailFactViewController" customModule="Joke_Norris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DtB-Nr-Hvd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d2k-bo-rKI">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="931-ej-g31">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="534"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="Wpx-D1-Sso">
+                                        <rect key="frame" x="0.0" y="534" width="343" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7F-x9-z8J">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ya4-c5-oFF" customClass="CosmosView" customModule="Joke_Norris" customModuleProvider="target">
+                                                <rect key="frame" x="223" y="0.0" width="120" height="20"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d2k-bo-rKI" firstAttribute="leading" secondItem="UaD-3O-O1e" secondAttribute="leading" constant="16" id="b78-2k-Wmb"/>
+                            <constraint firstAttribute="trailing" secondItem="d2k-bo-rKI" secondAttribute="trailing" constant="16" id="eUT-Zy-QRk"/>
+                            <constraint firstItem="UaD-3O-O1e" firstAttribute="bottom" secondItem="d2k-bo-rKI" secondAttribute="bottom" id="jXU-pN-C5A"/>
+                            <constraint firstItem="d2k-bo-rKI" firstAttribute="top" secondItem="UaD-3O-O1e" secondAttribute="top" id="ss2-F2-m5g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UaD-3O-O1e"/>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="Z7F-x9-z8J" id="yn9-Ck-7Dr"/>
+                        <outlet property="image" destination="931-ej-g31" id="GFT-Qy-ATj"/>
+                        <outlet property="rating" destination="ya4-c5-oFF" id="HuC-rV-nWs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnS-Tp-rtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3657" y="-656"/>
+            <point key="canvasLocation" x="3656.8000000000002" y="-656.22188905547227"/>
         </scene>
         <!--Text-->
         <scene sceneID="gZQ-DG-BFT">
