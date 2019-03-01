@@ -15,6 +15,7 @@ struct Fact: Decodable {
     let vote: String
     let points: String
     var rating: Double?
+    var imageData: Data?
 }
 
 

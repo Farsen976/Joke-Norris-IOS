@@ -10,9 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var manager = FactsManager()
+    var page = 1
+    let itemsPerRow = 3
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,20 +22,37 @@ class CollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        manager.getImageFacts { (facts, error) in
-            print(facts)
-            if let facts = facts {
-                self.manager.facts = facts
+        self.loadData()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = self.collectionView.frame.width
+        let width: CGFloat = collectionViewWidth - (10 * CGFloat(itemsPerRow-1))
+        let cellWidth: CGFloat = width / CGFloat(self.itemsPerRow)
+        
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let layout = UICollectionViewLayout()
+//        let collectionViewWidth = self.collectionView.frame.width
+//        let width = collectionViewWidth - (10 * CGFloat(itemsPerRow-1))
+//        layout.itemSiz
+//    }
+    
+    
+    func loadData(){
+        manager.getImageFacts(page: page, completion: { (facts, error) in
+            if error == nil {
+                print(self.manager.facts)
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
             }
-            
-        }
-
-        // Do any additional setup after loading the view.
+        })
     }
 
     /*
@@ -48,28 +67,43 @@ class CollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return manager.facts.count ?? 0
+        return manager.facts.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fact", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fact", for: indexPath) as! CollectionViewCell
         
-        /*var imageview:UIImageView=UIImageView(frame: CGRect(x: 50, y: 50, width: 200, height: 200));
-
-        let currentFact = manager.facts[indexPath.row]
-        var image: UIImage = UIImage(named: currentFact.fact)
-        imageview.contents
-        cell.contentView.addimage(image)*/
+        cell.img.image = UIImage.gifImageWithName("loader")
+        
+        var currentFact = self.manager.facts[indexPath.row]
+        let imageUrl:URL = URL(string: currentFact.fact)!
+        
+        if(currentFact.imageData != nil) {
+            cell.img.image = UIImage(data: currentFact.imageData!)
+        } else {
+            DispatchQueue.global().async {
+                let imageData = NSData(contentsOf: imageUrl)!
+                DispatchQueue.main.async {
+                    currentFact.imageData = imageData as Data
+                    cell.img.image = UIImage(data: currentFact.imageData!)
+                }
+            }
+        }
+        
+        //cell.img.image = UIImage.gifImageWithURL(currentFact.fact)
     
         return cell
+        
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row >= self.manager.facts.count - 1 {
+            self.page += 1
+            self.loadData()
+            
+        }
     }
 
     // MARK: UICollectionViewDelegate

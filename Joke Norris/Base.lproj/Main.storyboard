@@ -9,28 +9,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Pictures-->
         <scene sceneID="EGc-Ah-Nvg">
             <objects>
-                <collectionViewController id="5Ca-vh-yTv" sceneMemberID="viewController">
+                <collectionViewController id="5Ca-vh-yTv" customClass="CollectionViewController" customModule="Joke_Norris" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fmr-6z-iUQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wvi-vf-uTo">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aen-Zm-u4A">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="fact" id="aen-Zm-u4A" customClass="CollectionViewCell" customModule="Joke_Norris" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-SC-zAh">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6aa-SC-zAh" secondAttribute="trailing" id="0kV-Cf-GNB"/>
+                                    <constraint firstItem="6aa-SC-zAh" firstAttribute="leading" secondItem="aen-Zm-u4A" secondAttribute="leading" id="INn-G9-mrM"/>
+                                    <constraint firstItem="6aa-SC-zAh" firstAttribute="top" secondItem="aen-Zm-u4A" secondAttribute="top" id="baZ-wO-Zr5"/>
+                                    <constraint firstAttribute="bottom" secondItem="6aa-SC-zAh" secondAttribute="bottom" id="nFr-qu-MAE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="img" destination="6aa-SC-zAh" id="IXl-iR-MAw"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -38,13 +52,13 @@
                             <outlet property="delegate" destination="5Ca-vh-yTv" id="3z8-gB-Cnt"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="73I-I6-cFh"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" id="73I-I6-cFh"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rl2-P8-VN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="-592"/>
+            <point key="canvasLocation" x="1457" y="-684"/>
         </scene>
-        <!--Item-->
+        <!--Text-->
         <scene sceneID="gZQ-DG-BFT">
             <objects>
                 <tableViewController id="naf-Vx-nDy" customClass="TableViewController" customModule="Joke_Norris" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,25 +67,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="loader" id="bxc-iY-Nss" customClass="TableViewCellLoader" customModule="Joke_Norris" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bxc-iY-Nss" id="4x8-Yp-dm4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loader.gif" translatesAutoresizingMaskIntoConstraints="NO" id="XqC-1F-N4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="gif" destination="XqC-1F-N4u" id="X1e-Pg-dMp"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fact" id="2LI-7c-3AP" customClass="TableViewCell" customModule="Joke_Norris" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2LI-7c-3AP" id="F0M-Zu-sdB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -140,13 +137,30 @@
                                     <outlet property="rating" destination="vCC-dx-Xnr" id="DxW-0y-45X"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="loader" id="bxc-iY-Nss" customClass="TableViewCellLoader" customModule="Joke_Norris" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bxc-iY-Nss" id="4x8-Yp-dm4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loader.gif" translatesAutoresizingMaskIntoConstraints="NO" id="XqC-1F-N4u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gif" destination="XqC-1F-N4u" id="X1e-Pg-dMp"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="naf-Vx-nDy" id="p9c-SF-mot"/>
                             <outlet property="delegate" destination="naf-Vx-nDy" id="vcp-9X-wzp"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="tOR-mY-mvW"/>
+                    <tabBarItem key="tabBarItem" title="Text" id="tOR-mY-mvW"/>
                     <connections>
                         <outlet property="tableView" destination="jtK-W2-fYD" id="1Q2-TG-XbV"/>
                     </connections>
