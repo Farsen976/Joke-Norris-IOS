@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode10
+xcode_project: Joke Norris.xcodeproj # path to your xcodeproj folder
+xcode_scheme: Joke NorrisTests
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
